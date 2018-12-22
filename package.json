@@ -10,7 +10,7 @@
   "author": "Anton Telesh <telesh91@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --coverage && codecov",
     "lint": "eslint ./**/*.js",
     "precommit": "jest --coverage && lint-staged"
   },
@@ -34,6 +34,7 @@
     "yargs": "^12.0.5"
   },
   "devDependencies": {
+    "codecov": "^3.1.0",
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
     "husky": "^1.2.1",
