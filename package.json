@@ -24,6 +24,8 @@
     "singleQuote": true
   },
   "dependencies": {
+    "minimatch": "^3.0.4",
+    "node-fs-extra": "^0.8.2",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
