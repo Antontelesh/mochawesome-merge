@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Merge several Mochawesome JSON reports",
   "main": "lib/index.js",
-  "bin": "bin/mochawesome-merge.js",
+  "bin": {
+    "mochawesome-merge": "bin/mochawesome-merge.js"
+  },
   "repository": "git@github.com:Antontelesh/mochawesome-merge.git",
   "author": "Anton Telesh <telesh91@gmail.com>",
   "license": "MIT",
