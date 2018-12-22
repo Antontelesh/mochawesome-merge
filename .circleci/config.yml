@@ -29,3 +29,9 @@ jobs:
           command: |
             yarn lint
             yarn test
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
