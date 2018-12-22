@@ -1,4 +1,5 @@
-const { merge } = require('../lib')
+#!/usr/bin/env node
+const { merge } = require('../lib/index')
 
 const { argv } = require('yargs').option('reportDir')
 
