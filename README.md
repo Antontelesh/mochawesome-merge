@@ -1,6 +1,7 @@
 # mochawesome-merge
 
 [![CircleCI](https://circleci.com/gh/Antontelesh/mochawesome-merge.svg?style=svg)](https://circleci.com/gh/Antontelesh/mochawesome-merge)
+[![codecov](https://codecov.io/gh/Antontelesh/mochawesome-merge/branch/master/graph/badge.svg)](https://codecov.io/gh/Antontelesh/mochawesome-merge)
 
 Merge several [Mochawesome](https://github.com/adamgruber/mochawesome) JSON reports
 
