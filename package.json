@@ -1,0 +1,9 @@
+{
+  "name": "mochawesome-merge",
+  "version": "1.0.0",
+  "description": "Merge several Mochawesome JSON reports",
+  "main": "lib.js",
+  "repository": "git@github.com:Antontelesh/mochawesome-merge.git",
+  "author": "Anton Telesh <telesh91@gmail.com>",
+  "license": "MIT"
+}
