@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`merge merges configs 1`] = `
+Object {
+  "duration": 600,
+  "end": Any<String>,
+  "failures": 3,
+  "hasOther": false,
+  "hasSkipped": false,
+  "other": 0,
+  "passPercent": 50,
+  "passPercentClass": "warning",
+  "passes": 3,
+  "pending": 0,
+  "pendingPercent": 0,
+  "pendingPercentClass": "danger",
+  "skipped": 0,
+  "start": Any<String>,
+  "suites": 3,
+  "tests": 6,
+  "testsRegistered": 6,
+}
+`;
