@@ -1,6 +1,6 @@
 {
   "name": "mochawesome-merge",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Merge several Mochawesome JSON reports",
   "main": "lib/index.js",
   "bin": {
