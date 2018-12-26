@@ -21,3 +21,24 @@ Object {
   "testsRegistered": 6,
 }
 `;
+
+exports[`merge merges configs 2`] = `
+Object {
+  "_timeout": 2000,
+  "afterHooks": Array [],
+  "beforeHooks": Array [],
+  "duration": 400,
+  "failures": Array [],
+  "file": "",
+  "fullFile": "",
+  "passes": Array [],
+  "pending": Array [],
+  "root": true,
+  "rootEmpty": true,
+  "skipped": Array [],
+  "suites": Any<Array>,
+  "tests": Array [],
+  "title": "",
+  "uuid": Any<String>,
+}
+`;
