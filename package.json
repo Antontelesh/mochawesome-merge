@@ -29,7 +29,9 @@
     "singleQuote": true
   },
   "release": {
-    "verifyConditions": "condition-circle"
+    "verifyConditions": "condition-circle",
+    "analyzeCommits": "simple-commit-message",
+    "generateNotes": "github-post-release"
   },
   "dependencies": {
     "fs-extra": "^7.0.1",
@@ -42,11 +44,13 @@
     "condition-circle": "^2.0.2",
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
+    "github-post-release": "^1.13.1",
     "husky": "^1.2.1",
     "is-ci": "^2.0.0",
     "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
     "prettier": "^1.15.3",
-    "semantic-release": "^15.13.3"
+    "semantic-release": "^15.13.3",
+    "simple-commit-message": "^4.0.3"
   }
 }
