@@ -51,7 +51,7 @@ Since the version `3.0.0`, Cypress runs every spec separately, which leads to ge
 
 First, configure `cypress.json`:
 
-```json
+```jsonc
 {
   // use mochawesome reporter as usually
   "reporter": "mochawesome",
