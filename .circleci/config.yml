@@ -6,7 +6,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/node:8.10
+      - image: circleci/node:8
     environment:
       CODECOV_TOKEN: f8ed9d20-3500-440b-bf81-896d29d1393e
     steps:
@@ -32,8 +32,19 @@ jobs:
             yarn lint
             yarn test
 
+  release:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - run: yarn install
+      - run: yarn semantic-release
+
 workflows:
   version: 2
   test:
     jobs:
       - test
+      - release:
+          requires:
+            - test

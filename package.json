@@ -1,6 +1,6 @@
 {
   "name": "mochawesome-merge",
-  "version": "1.0.5",
+  "version": "0.0.0-development",
   "description": "Merge several Mochawesome JSON reports",
   "main": "lib/index.js",
   "bin": {
@@ -12,7 +12,8 @@
   "scripts": {
     "test": "is-ci && jest --coverage && codecov || jest --coverage",
     "lint": "eslint ./**/*.js",
-    "precommit": "jest --coverage && lint-staged"
+    "precommit": "jest --coverage && lint-staged",
+    "semantic-release": "semantic-release"
   },
   "lint-staged": {
     "*.js": [
@@ -27,6 +28,9 @@
     "semi": false,
     "singleQuote": true
   },
+  "release": {
+    "verifyConditions": "condition-circle"
+  },
   "dependencies": {
     "fs-extra": "^7.0.1",
     "minimatch": "^3.0.4",
@@ -35,12 +39,14 @@
   },
   "devDependencies": {
     "codecov": "^3.1.0",
+    "condition-circle": "^2.0.2",
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
     "husky": "^1.2.1",
     "is-ci": "^2.0.0",
     "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
-    "prettier": "^1.15.3"
+    "prettier": "^1.15.3",
+    "semantic-release": "^15.13.3"
   }
 }
