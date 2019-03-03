@@ -9,6 +9,9 @@
   "repository": "git@github.com:Antontelesh/mochawesome-merge.git",
   "author": "Anton Telesh <telesh91@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "scripts": {
     "test": "is-ci && jest --coverage && codecov || jest --coverage",
     "lint": "eslint ./**/*.js",
