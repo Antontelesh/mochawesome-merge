@@ -9,36 +9,13 @@ Object {
   "hasSkipped": false,
   "other": 0,
   "passPercent": 50,
-  "passPercentClass": "warning",
   "passes": 3,
   "pending": 0,
   "pendingPercent": 0,
-  "pendingPercentClass": "danger",
   "skipped": 0,
   "start": Any<String>,
   "suites": 3,
   "tests": 6,
   "testsRegistered": 6,
-}
-`;
-
-exports[`merge merges configs 2`] = `
-Object {
-  "_timeout": 2000,
-  "afterHooks": Array [],
-  "beforeHooks": Array [],
-  "duration": 400,
-  "failures": Array [],
-  "file": "",
-  "fullFile": "",
-  "passes": Array [],
-  "pending": Array [],
-  "root": true,
-  "rootEmpty": true,
-  "skipped": Array [],
-  "suites": Any<Array>,
-  "tests": Array [],
-  "title": "",
-  "uuid": Any<String>,
 }
 `;
