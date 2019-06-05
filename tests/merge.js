@@ -6,17 +6,11 @@ describe('merge', () => {
     const report = await merge({
       reportDir: path.resolve(__dirname, './mochawesome-report'),
     })
-    const rootSuite = report.suites
-    const suites = rootSuite.suites
+    const suites = report.results
 
     expect(report.stats).toMatchSnapshot({
       start: expect.any(String),
       end: expect.any(String),
-    })
-    expect(report.copyrightYear).toEqual(new Date().getFullYear())
-    expect(rootSuite).toMatchSnapshot({
-      uuid: expect.any(String),
-      suites: expect.any(Array),
     })
     expect(suites.length).toBe(3)
 
