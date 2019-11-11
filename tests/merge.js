@@ -4,6 +4,7 @@ const path = require('path')
 describe('merge', () => {
   test('merges configs', async () => {
     const report = await merge({
+      rootDir: process.cwd(),
       reportDir: path.resolve(__dirname, './mochawesome-report'),
     })
     const suites = report.results
