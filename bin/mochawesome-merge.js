@@ -1,7 +1,15 @@
 #!/usr/bin/env node
 const { merge } = require('../lib/index')
 
-const { argv } = require('yargs').option('reportDir')
+const { argv } = require('yargs')
+  .option('rootDir', {
+    type: 'string',
+    description: 'source mochawesome JSON reports root directory.',
+  })
+  .option('reportDir', {
+    type: 'string',
+    description: 'source mochawesome JSON reports directory.',
+  })
 
 merge(argv).then(
   report => {
