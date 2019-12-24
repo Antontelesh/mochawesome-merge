@@ -27,9 +27,9 @@ const { merge } = require('mochawesome-merge')
 
 // See Options below
 const options = {
-  rootDir: process.cwd(),
-  reportDir: 'report',
+  reportsGlob: './report/*.json',
 }
+
 merge(options).then(report => {
   console.log(report)
 })
@@ -38,15 +38,12 @@ merge(options).then(report => {
 ## CLI
 
 ```
-$ mochawesome-merge --rootDir [rootDirectory] --reportDir [directory] > output.json
+$ mochawesome-merge [reportsGlob] > output.json
 ```
 
-## Options
+## Arguments
 
-- `rootDir` (optional) — source mochawesome JSON reports root directory. Defaults to `process.cwd()`.
-- `reportDir` (optional) — source mochawesome JSON reports directory. Defaults to `mochawesome-report`.
-
-The final mochawesome JSON reports will be in `path.resolve(rootDir, reportDir)`.
+- `reportsGlob`: glob pattern for source mochawesome JSON reports. [string] [default: "./mochawesome-report/mochawesome*.json"]
 
 ## [Cypress](https://github.com/cypress-io/cypress)
 
