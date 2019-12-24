@@ -1,15 +1,17 @@
 #!/usr/bin/env node
+
 const { merge } = require('../lib/index')
 
-const { argv } = require('yargs')
-  .option('rootDir', {
-    type: 'string',
-    description: 'source mochawesome JSON reports root directory.',
-  })
-  .option('reportDir', {
-    type: 'string',
-    description: 'source mochawesome JSON reports directory.',
-  })
+const { argv } = require('yargs').command(
+  '$0 [reportsGlob]',
+  'Merge several Mochawesome JSON reports',
+  yargs =>
+    yargs.positional('reportsGlob', {
+      type: 'string',
+      default: './mochawesome-report/mochawesome*.json',
+      description: 'glob pattern for source mochawesome JSON reports.',
+    })
+)
 
 merge(argv).then(
   report => {
