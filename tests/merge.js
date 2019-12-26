@@ -3,7 +3,7 @@ const { merge } = require('../lib')
 describe('merge', () => {
   test('merges configs', async () => {
     const report = await merge({
-      reportsGlob: `./tests/mochawesome-report/mochawesome*.json`,
+      files: [`./tests/mochawesome-report/mochawesome*.json`],
     })
     const suites = report.results
 
@@ -29,7 +29,7 @@ describe('merge', () => {
   test('throws when invalid directory provided', async () => {
     const reportsGlob = './invalid-directory/mochawesome*.json'
 
-    await expect(merge({ reportsGlob })).rejects.toEqual(
+    await expect(merge({ files: [reportsGlob] })).rejects.toEqual(
       new Error(`Pattern ${reportsGlob} matched no report files`)
     )
   })

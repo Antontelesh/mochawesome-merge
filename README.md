@@ -27,7 +27,7 @@ const { merge } = require('mochawesome-merge')
 
 // See Options below
 const options = {
-  reportsGlob: './report/*.json',
+  files: ['./report/*.json'],
 }
 
 merge(options).then(report => {
@@ -38,12 +38,12 @@ merge(options).then(report => {
 ## CLI
 
 ```
-$ mochawesome-merge [reportsGlob] > output.json
+$ mochawesome-merge [file...] > output.json
 ```
 
 ## Arguments
 
-- `reportsGlob`: glob pattern for source mochawesome JSON reports. [string] [default: "./mochawesome-report/mochawesome*.json"]
+- `files`: list of source report file paths. Can include glob patterns. Defaults to `["./mochawesome-report/mochawesome*.json"]`.
 
 ## [Cypress](https://github.com/cypress-io/cypress)
 

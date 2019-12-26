@@ -2,18 +2,7 @@
 
 const { merge } = require('../lib/index')
 
-const { argv } = require('yargs').command(
-  '$0 [reportsGlob]',
-  'Merge several Mochawesome JSON reports',
-  yargs =>
-    yargs.positional('reportsGlob', {
-      type: 'string',
-      default: './mochawesome-report/mochawesome*.json',
-      description: 'glob pattern for source mochawesome JSON reports.',
-    })
-)
-
-merge(argv).then(
+merge({ files: process.argv.slice(2) }).then(
   report => {
     process.stdout.write(JSON.stringify(report, null, 2))
   },
