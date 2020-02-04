@@ -7,10 +7,7 @@ describe('merge', () => {
     })
     const suites = report.results
 
-    expect(report.stats).toMatchSnapshot({
-      start: expect.any(String),
-      end: expect.any(String),
-    })
+    expect(report.stats).toMatchSnapshot()
     expect(suites.length).toBe(3)
 
     expect(suites[0].tests.length).toBe(1)
