@@ -20,14 +20,21 @@ via `npm`:
 $ npm install mochawesome-merge --save-dev
 ```
 
-## Usage
+## Examples
+
+### JavaScript API
 
 ```javascript
 const { merge } = require('mochawesome-merge')
 
-// See Options below
+// See Params section below
 const options = {
-  files: ['./report/*.json'],
+  files: [
+    './report/*.json',
+
+    // you can specify more files or globs if necessary:
+    './mochawesome-report/*.json',
+  ],
 }
 
 merge(options).then(report => {
@@ -35,15 +42,66 @@ merge(options).then(report => {
 })
 ```
 
-## CLI
+### CLI
 
 ```
-$ mochawesome-merge [file...] > output.json
+$ npx mochawesome-merge ./report/*.json > output.json
 ```
 
-## Arguments
+You can specify as many paths as you wish:
 
-- `files`: list of source report file paths. Can include glob patterns. Defaults to `["./mochawesome-report/mochawesome*.json"]`.
+```
+$ npx mochawesome-merge ./report/*.json ./mochawesome-report/*.json > output.json
+```
+
+### Params
+
+- `files`: list of source report file paths. Can include glob patterns. 
+  Defaults to `["./mochawesome-report/mochawesome*.json"]`.
+
+## Migration to v4
+
+Version 4 has come with a breaking change —
+it no more accepts params like `reportDir` or `rootDir`.
+Instead, it now accepts a list of file paths or glob patterns
+to source report files. If you are migrating to version 4
+you likely have to change your params accordignly.
+
+### JavaScript API
+
+Let's say you have a bunch of reports that you want to merge
+under `./mochawesome-report` directory.
+Then you're probably using mochawesome-merge like this:
+
+```js
+merge({
+  reportDir: "mochawesome-report",
+});
+```
+
+After switching to version 4 you need to rename
+`reportDir` param to `files`
+and change the value to point to your files
+rather than the directory:
+
+```diff
+merge({
+-  reportDir: "mochawesome-report",
++  files: ["./mochawesome-report/*.json"],
+})
+```
+
+### CLI
+
+After upgrading to version 4 all you need
+is to remove the `--reportDir` option
+and instead specify a glob pattern
+or several ones if necessary, separating each one with a space:
+
+```diff
+- npx mochawesome-merge --reportDir mochawesome-report > mochawesome.json
++ npx mochawesome-merge ./mochawesome-report/*.json > mochawesome.json
+```
 
 ## [Cypress](https://github.com/cypress-io/cypress)
 
