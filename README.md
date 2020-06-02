@@ -45,19 +45,36 @@ merge(options).then(report => {
 ### CLI
 
 ```
+$ npx mochawesome-merge ./report/*.json -o output.json
+```
+
+or legacy usage
+
+```
 $ npx mochawesome-merge ./report/*.json > output.json
 ```
 
 You can specify as many paths as you wish:
 
 ```
-$ npx mochawesome-merge ./report/*.json ./mochawesome-report/*.json > output.json
+$ npx mochawesome-merge ./report/*.json ./mochawesome-report/*.json -o output.json
+```
+
+You can also use a named option for the files like so:
+
+```
+$ npx mochawesome-merge -f ./report/*.json ./mochawesome-report/*.json -o output.json
 ```
 
 ### Params
 
-- `files`: list of source report file paths. Can include glob patterns. 
-  Defaults to `["./mochawesome-report/mochawesome*.json"]`.
+- `files`: list of source report file paths. Can include glob patterns.
+- Aliases: `-f | --files` or first positional argument
+- Defaults to `["./mochawesome-report/mochawesome*.json"]`.
+#
+- `output`: a file path to the bundled results. Should be a `json` file 
+- Aliases: `-o | --output`
+- Defaults to `stdout`.
 
 ## Migration to v4
 
