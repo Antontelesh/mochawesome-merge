@@ -29,14 +29,14 @@ describe('merge', () => {
   test('throws when invalid directory provided', async () => {
     const reportsGlob = './invalid-directory/mochawesome*.json'
 
-    await expect(merge({ files: [reportsGlob] })).rejects.toEqual(
+    expect(merge({ files: [reportsGlob] })).rejects.toEqual(
       new Error(`Pattern ${reportsGlob} matched no report files`)
     )
   })
 
   test('defaults to mochawesome-report directory', async () => {
     const reportsGlob = './mochawesome-report/mochawesome*.json'
-    await expect(merge()).rejects.toEqual(
+    expect(merge()).rejects.toEqual(
       new Error(`Pattern ${reportsGlob} matched no report files`)
     )
   })
