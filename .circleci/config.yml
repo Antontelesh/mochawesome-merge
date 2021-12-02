@@ -6,7 +6,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:14
     environment:
       CODECOV_TOKEN: f8ed9d20-3500-440b-bf81-896d29d1393e
     steps:
@@ -34,7 +34,7 @@ jobs:
 
   release:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:14
     steps:
       - checkout
       - run: yarn install
