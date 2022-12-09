@@ -1,0 +1,72 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 1,
+    "failures": 0,
+    "start": "2020-12-21T17:41:49.071Z",
+    "end": "2020-12-21T17:42:36.693Z",
+    "duration": 100,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "b527abbe-ae4e-4f8d-a847-14ded62c3f88",
+      "title": "Suite 4",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Test 1",
+          "fullTitle": "Test 1",
+          "duration": 100,
+          "state": "pending",
+          "speed": "slow",
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "code": "assert(true === false)",
+          "err": {},
+          "isRoot": false,
+          "uuid": "adb6842f-f468-4b4d-a1b9-ce6027b65ebd",
+          "isHook": false,
+          "skipped": true
+        },
+        {
+          "title": "Test 2",
+          "fullTitle": "Test 2",
+          "duration": 100,
+          "state": "skipped",
+          "speed": "slow",
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "code": "assert(true === true)",
+          "err": {},
+          "isRoot": false,
+          "uuid": "adb6842f-f468-4b4d-a1b9-ce6027b65ebe",
+          "isHook": false,
+          "skipped": true
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [],
+      "pending": ["b527abbe-ae4e-4f8d-a847-14ded62c3f88"],
+      "skipped": ["adb6842f-f468-4b4d-a1b9-ce6027b65ebe"],
+      "duration": 100,
+      "root": false,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ]
+}
