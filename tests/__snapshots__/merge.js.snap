@@ -2,20 +2,20 @@
 
 exports[`merge merges configs 1`] = `
 Object {
-  "duration": 600,
-  "end": "2019-06-12T02:22:23.789Z",
+  "duration": 800,
+  "end": "2020-12-21T17:42:36.693Z",
   "failures": 3,
   "hasOther": false,
-  "hasSkipped": false,
+  "hasSkipped": true,
   "other": 0,
-  "passPercent": 50,
+  "passPercent": 37.5,
   "passes": 3,
-  "pending": 0,
-  "pendingPercent": 0,
-  "skipped": 0,
+  "pending": 1,
+  "pendingPercent": 12.5,
+  "skipped": 1,
   "start": "2018-12-21T17:41:49.071Z",
-  "suites": 3,
-  "tests": 6,
-  "testsRegistered": 6,
+  "suites": 4,
+  "tests": 8,
+  "testsRegistered": 8,
 }
 `;
