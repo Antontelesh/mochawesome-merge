@@ -1,44 +1,47 @@
 {
-  "name": "mochawesome-merge",
-  "version": "0.0.0-development",
-  "description": "Merge several Mochawesome JSON reports",
-  "main": "lib/index.js",
+  "_from": "mochawesome-merge@4.0.3",
+  "_id": "mochawesome-merge@4.0.3",
+  "_inBundle": false,
+  "_integrity": "sha512-i4gyUE3UyUbdUVtV7cZRUSSQJbsyH8QJe4jeKUclnC4aK5oFGNz5wTfXyhZ5KXGISh2k76/48uOn8A3PkXRt5g==",
+  "_location": "/mochawesome-merge",
+  "_phantomChildren": {
+    "graceful-fs": "4.2.10"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "mochawesome-merge@4.0.3",
+    "name": "mochawesome-merge",
+    "escapedName": "mochawesome-merge",
+    "rawSpec": "4.0.3",
+    "saveSpec": null,
+    "fetchSpec": "4.0.3"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mochawesome-merge/-/mochawesome-merge-4.0.3.tgz",
+  "_shasum": "b8fc4e43a70695f77e4106ba3d3ff0dead844280",
+  "_spec": "mochawesome-merge@4.0.3",
+  "_where": "/Users/dmytro_bogdan/Documents/GitHub/WebUiTests",
+  "author": {
+    "name": "Anton Telesh",
+    "email": "telesh91@gmail.com"
+  },
   "bin": {
     "mochawesome-merge": "bin/mochawesome-merge.js"
   },
-  "repository": "git@github.com:Antontelesh/mochawesome-merge.git",
-  "author": "Anton Telesh <telesh91@gmail.com>",
-  "license": "MIT",
-  "engines": {
-    "node": ">=10.0.0"
+  "bugs": {
+    "url": "https://github.com/Antontelesh/mochawesome-merge/issues"
   },
-  "scripts": {
-    "test": "is-ci && jest --coverage && codecov || jest --coverage",
-    "lint": "eslint ./**/*.js",
-    "precommit": "jest --coverage && lint-staged",
-    "semantic-release": "semantic-release"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint",
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "prettier": {
-    "trailingComma": "es5",
-    "tabWidth": 2,
-    "semi": false,
-    "singleQuote": true
-  },
-  "release": {
-    "branch": "master"
-  },
+  "bundleDependencies": false,
   "dependencies": {
     "fs-extra": "^7.0.1",
     "glob": "^7.1.6",
-    "yargs": "^15.3.1"
+    "uuid": "^3.3.2"
   },
+  "deprecated": false,
+  "description": "Merge several Mochawesome JSON reports",
   "devDependencies": {
     "codecov": "^3.1.0",
     "eslint": "^5.10.0",
@@ -48,6 +51,40 @@
     "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
     "prettier": "^1.15.3",
-    "semantic-release": "^17.2.3"
-  }
+    "semantic-release": "^15.13.3"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "homepage": "https://github.com/Antontelesh/mochawesome-merge#readme",
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "main": "lib/index.js",
+  "name": "mochawesome-merge",
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "release": {
+    "branch": "master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Antontelesh/mochawesome-merge.git"
+  },
+  "scripts": {
+    "lint": "eslint ./**/*.js",
+    "precommit": "jest --coverage && lint-staged",
+    "semantic-release": "semantic-release",
+    "test": "is-ci && jest --coverage && codecov || jest --coverage"
+  },
+  "version": "4.0.3"
 }
