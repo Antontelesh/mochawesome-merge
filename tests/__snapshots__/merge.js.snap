@@ -2,7 +2,7 @@
 
 exports[`merge merges configs 1`] = `
 Object {
-  "duration": 800,
+  "duration": 63158447622,
   "end": "2020-12-21T17:42:36.693Z",
   "failures": 3,
   "hasOther": false,
