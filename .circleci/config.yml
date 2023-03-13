@@ -6,7 +6,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: cimg/node:18
+      - image: cimg/node:lts
     environment:
       CODECOV_TOKEN: f8ed9d20-3500-440b-bf81-896d29d1393e
     steps:
