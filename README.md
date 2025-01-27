@@ -1,20 +1,10 @@
 # mochawesome-merge
 
-[![CircleCI](https://circleci.com/gh/Antontelesh/mochawesome-merge.svg?style=svg)](https://circleci.com/gh/Antontelesh/mochawesome-merge)
-[![codecov](https://codecov.io/gh/Antontelesh/mochawesome-merge/branch/master/graph/badge.svg)](https://codecov.io/gh/Antontelesh/mochawesome-merge)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 Merge several [Mochawesome](https://github.com/adamgruber/mochawesome) JSON reports
 
 ## Installation
-
-via `yarn`:
-
-```
-$ yarn add mochawesome-merge --dev
-```
-
-via `npm`:
 
 ```
 $ npm install mochawesome-merge --save-dev
@@ -173,12 +163,12 @@ For example, an AWS CodeBuild `buildspec.yml` file might look something like thi
 phases:
   install:
     commands:
-      - yarn install
+      - npm ci
   build:
     commands:
-      - yarn cypress run
+      - npm run cypress
   post_build:
     commands:
-      - yarn mochawesome-merge > mochawesome.json
-      - yarn marge mochawesome.json
+      - npm run mochawesome-merge > mochawesome.json
+      - npm run marge mochawesome.json
 ```
