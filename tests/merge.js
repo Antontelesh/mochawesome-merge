@@ -3,7 +3,7 @@ const { merge } = require('../lib')
 describe('merge', () => {
   test('merges configs', async () => {
     const report = await merge({
-      files: [`./tests/mochawesome-report/mochawesome*.json`],
+      files: ['./tests/mochawesome-report/mochawesome*.json'],
     })
     const suites = report.results
 
