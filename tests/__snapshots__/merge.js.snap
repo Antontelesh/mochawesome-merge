@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`merge merges configs 1`] = `
-Object {
+{
   "duration": 156052,
   "end": "2018-12-21T17:44:25.123Z",
   "failures": 3,
