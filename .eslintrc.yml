@@ -1,0 +1,12 @@
+extends:
+  - eslint:recommended
+  - prettier
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+  impliedStrict: true
+env:
+  node: true
+  es6: true
+rules:
+  no-console: 0
